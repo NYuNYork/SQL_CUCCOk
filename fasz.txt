@@ -1,0 +1,12 @@
+SELECT DISTINCT telepules
+FROM partnerek
+ORDER by telepules ASC
+-----------------------
+SELECT COUNT(*) AS alkalmak 
+FROM partnerek INNER JOIN kiszallitasok
+ON partnerek.id = kiszallitasok.partnerid
+WHERE telepules LIKE 'Vác'
+-----------------------
+SELECT MAX(karton) AS legtobb
+FROM kiszallitasok
+WHERE datum LIKE '2016-05-__'
